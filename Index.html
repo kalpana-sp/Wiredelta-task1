@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>WA Institute</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <script src="./home.js"></script>
+	  <link rel="stylesheet" href="./home.css">
+	</head>
+	
+<body>
+    <div class="container-fluid">
+        <img alt="last.jpg" src="https://lh6.googleusercontent.com/bUAZZ6qPpj8e-BfNQ7HZDx0CovFYP08Hg01hPL2mv2T-4XcYP48OwrMN-INCnUau2lAGOS4iYFvISQbwg3L3_k63FaElSJaW-EtrPGpBpOmflquU_DUowvOF31VFRFrtcl288_o" style="width: 100%; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+        <h1>Choose a Service</h1>
+        <div class="row content">
+            <div class="col-sm-2 sidenav">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="menu-item age-calc active"> AGE CALCULATOR </li>
+                    <li class="menu-item li-calc align-text">LIFETIME SUPPLY CALCULATOR</li>
+                    <li class="menu-item gm-calc">GEOMETRIZER</li>
+                    <li class="menu-item temp-calc align-text">TEMPERATURE CONVERTOR</li>
+                </ul>
+            </div>
+            <div class="col-sm-10">
+                <div class="row mainnav">
+                    <div class="mainnav-inner">
+                        <div class="" style="width:50%; float:left;">
+                            <div class="age-calc mainnav-item">AGE CALCULATOR</div>
+                        </div>
+                        <div class="" style="width:50%; float:right;">
+                            <div class="li-calc mainnav-item">LIFETIME SUPPLY CALCULATOR</div>
+                        </div>
+                        <div class="" style="width:50%; float:left;padding-top:30px;">
+                            <div class="gm-calc mainnav-item">GEOMETRIZER</div>
+                        </div>
+                        <div class="" style="width:50%; float:right;padding-top:30px;">
+                            <div class="temp-calc mainnav-item">TEMPERATURE CONVERTOR</div>
+                        </div>  
+                    </div>
+                </div>
+                <div class="row calc-section-main">
+                    <div class="age-calc-body calc-section">
+                        <h2>Calculate Your Age</h2>
+                        <div class="form-inline">
+                            <label for="birth-year">Enter Year of Birth</label>
+                            <input type="text" class="form-control" id="birth-year">
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <button type="button" class="btn btn-primary" onclick="calculateAge()">
+                                <i class="fa fa-calculator"></i> Calculate
+                            </button>
+                        </div>
+                        <div class="alert age-calc-result" role="alert"></div>
+                    </div>
+                    <div class="li-calc-body calc-section">
+                        <h2>Calculate Product LifeTime Supply</h2>
+                        <div class="form-inline product-age">
+                            <label for="person-age">How old are you</label>
+                            <input type="text" class="form-control" style="margin-left:37px;" id="person-age">
+                        </div>
+                        <div class="form-inline">
+                            <label for="consume-per-day">Consumption Per Day</label>
+                            <input type="text" class="form-control" id="consume-per-day">
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <button type="button" class="btn btn-primary" onclick="calculateSupply()">
+                                <i class="fa fa-calculator"></i> Calculate
+                            </button>
+                        </div>
+                        <div class="alert li-calc-result" role="alert"></div>
+                    </div>
+                    <div class="gm-calc-body calc-section">
+                        <span class="select-option-label">Select Option</span>
+                        <div>
+                            <div style="float:left;">
+                                <button type="button" id="circumference" class="btn btn-primary no-border-radius" onclick="showCircumferenceSection()">Circumference</button>
+                            </div>
+                            <div>
+                                <button type="button" id="area" class="btn btn-primary no-border-radius option-unselected" onclick="showAreaSection()">Area</button>
+                            </div>
+                        </div>
+
+                        <div class="calc-circumference">
+                            <h2>Calculate Circumference of a Circle</h2>
+                            <div class="form-inline">
+                                <label for="radius-circumference">Enter Radius of Circle</label>
+                                <input type="text" class="form-control" id="radius-circumference">
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary" onclick="calcCircumference()">
+                                    <i class="fa fa-calculator"></i> Calculate Circumference
+                                </button>
+                            </div>
+                            <div class="alert gm-calc-circumference-result" role="alert"></div>
+                        </div>
+                        <div class="calc-radius" style="display:none;">
+                            <h2>Calculate Area of a Circle</h2>
+                            <div class="form-inline">
+                                <label for="radius-area">Enter Radius of Circle</label>
+                                <input type="text" class="form-control" id="radius-area">
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary" onclick="calcArea()">
+                                    <i class="fa fa-calculator"></i> Calculate Area
+                                </button>
+                            </div>
+                            <div class="alert gm-calc-area-result" role="alert"></div>
+                        </div>
+                    </div>
+                    <div class="temp-calc-body calc-section">
+                        <span class="select-option-label">Select Option</span>
+                        <div>
+                            <div style="float:left;">
+                                <button type="button" id="celsius" class="btn btn-primary no-border-radius" onclick="showCelsiusSection()">Celcius to Fahrenheit</button>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" id="fahrenheit" class="btn btn-primary no-border-radius option-unselected" onclick="showFahrenheitSection()">Fahrenheit to Celsius</button>
+                            </div>
+                        </div>                       
+                        <div class="cels-fahren">
+                            <h2>Convert Celsius to Fahrenheit</h2>
+                            <div class="form-inline">
+                                <label for="temp-celcius">Enter Temperature in Celsius</label>
+                                <input type="text" class="form-control" id="temp-celsius">
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary" onclick="celsiusToFahrenheit()">
+                                    <i class="fas fa-thermometer"></i> Covert to Fahrenheit
+                                </button>
+                            </div>
+                            <div class="alert temp-celcius-result" role="alert"></div>
+                        </div>
+                        <div class="fahren-cels" style="display:none;">
+                            <h2>Convert Fahrenheit to Celsius</h2>
+                            <div class="form-inline">
+                                <label for="temp-fahrenheit">Enter Temperature in Fahrenheit</label>
+                                <input type="text" class="form-control" id="temp-fahrenheit">
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary" onclick="fahrenheitToCelsius()">
+                                    <i class="fas fa-thermometer"></i> Convert to Celcius
+                                </button>
+                            </div>
+                            <div class="alert temp-fahrenheit-result" role="alert"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <footer class="container-fluid page-footer">
+        <div class="footer-text">Copyright 2018 | All Rights Reserved. Produced in association with WA Institute</div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,15 @@
+.sidenav{background-color:#65CBB6; color: #FFF;height:600px;}
+.sidenav .align-text {display: inline-block; line-height: 17px !important;}
+.sidenav .age-calc, .sidenav .li-calc, .sidenav .gm-calc, .sidenav .temp-calc{cursor:pointer; height:60px; line-height:60px;}
+.sidenav .age-calc:hover, .sidenav .li-calc:hover, .sidenav .gm-calc:hover, .sidenav .temp-calc:hover{cursor:pointer; background-color: #8ae2d0 !important;}
+.mainnav .age-calc:hover, .mainnav .li-calc:hover, .mainnav .gm-calc:hover, .mainnav .temp-calc:hover{cursor:pointer; background-color: #ada4e4 !important;}
+.mainnav-inner{width:50%; height:50px; padding-top:80px;}
+.mainnav-item{background-color:#978cdc;color:#FFF;width:70%; text-align:center; height:50px; line-height: 50px;}
+.calc-section-main{padding-left:30px;}
+.product-age{padding-bottom: 10px;}
+.age-calc-result, .li-calc-result, .gm-calc-circumference-result,.gm-calc-area-result, .temp-celcius-result, .temp-fahrenheit-result{width:50%;}
+.no-border-radius{border-radius:0px !important;}
+.option-unselected{background-color: #FFF !important; color: #000 !important;}
+.select-option-label{float:left;font-weight: bold;line-height: 36px;padding-right: 10px;}
+.page-footer{background-color:#4B7DAE;height:50px;}
+.footer-text{text-align:center;line-height:50px; color:#FFF;}
